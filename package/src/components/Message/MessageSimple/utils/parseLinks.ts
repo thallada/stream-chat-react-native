@@ -31,7 +31,7 @@ export const parseLinksFromText = (input: string): LinkInfo[] => {
     // Matching these: https://reactnative.dev/docs/0.73/linking?syntax=ios#built-in-url-schemes
     const pattern = new RegExp(/^(mailto:|tel:|sms:|\S+:\/\/)/);
     if (!pattern.test(hrefWithProtocol)) {
-      hrefWithProtocol = 'http://' + hrefWithProtocol;
+      hrefWithProtocol = 'https://' + hrefWithProtocol;
     }
 
     return {
